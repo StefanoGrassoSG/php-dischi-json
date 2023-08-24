@@ -4,12 +4,18 @@ const { createApp } = Vue
         data() {
             return {
                 disks: [],
-                clicked: false
+                clicked: false,
+                singleInfo: []
             }
         },
         methods: {
-            openInfo(singleDisk) {
+            openInfo(diskId) {
                 this.clicked = true;
+                axios.get(`http://localhost/php-dischi-json/database/api.php?id=${diskId}`)
+                .then(res => {
+                    this.singleInfo = res.data
+                    console.log(this.singleInfo)
+                })
             },
             close() {
                 this.clicked = false;
@@ -18,9 +24,7 @@ const { createApp } = Vue
         created() {
             axios.get('http://localhost/php-dischi-json/database/api.php')
             .then(res => {
-                console.log(res.data);
                 this.disks = res.data
-                console.log(this.disks)
             })
         }
     }).mount('#app')

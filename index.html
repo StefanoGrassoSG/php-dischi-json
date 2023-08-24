@@ -17,7 +17,7 @@
 
             <main>
                 <div class="container">
-                    <div class="card" v-for="(singleDisk, i) in disks" @click="openInfo(singleDisk)">
+                    <div class="card main" v-for="(singleDisk, i) in disks" @click="openInfo(singleDisk.id)">
                         <div class="img-container">
                             <img :src="singleDisk.img" :alt="singleDisk.title">
                         </div>
@@ -37,16 +37,16 @@
             <div class="overflow" v-if="clicked == true">
                 <div class="card info">
                     <div class="img-container">
-                        <img :src="disks[1].img" :alt="disks.title">
+                        <img :src="singleInfo[0].img" :alt="singleInfo[0].title">
                     </div>
                     <div class="title">
-                        {{disks[1].title}}
+                        {{singleInfo[0].title}}
                     </div>
                     <div class="autor">
-                        {{disks[1].author}}
+                        {{singleInfo[0].author}}
                     </div>
                     <div class="year">
-                        {{disks[1].year}}
+                        {{singleInfo[0].year}}
                     </div>
                 </div>
 

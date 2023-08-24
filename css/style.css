@@ -42,6 +42,14 @@ main {
     color: white;
 }
 
+.card.main {
+    transition: all 0.2s ease-in-out;
+}
+
+.card.main:hover {
+    transform: scale(1.1);
+}
+
 .img-container {
     width: 100%;
     height: 70%;
