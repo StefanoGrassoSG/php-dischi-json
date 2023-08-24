@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
     <body>
-        <div id="app">
+        <div id="app" class="main-container">
             <header>
                 <h1>
                     SUPER DISKS
@@ -17,7 +17,7 @@
 
             <main>
                 <div class="container">
-                    <div class="card" v-for="(singleDisk, i) in disks">
+                    <div class="card" v-for="(singleDisk, i) in disks" @click="openInfo(singleDisk)">
                         <div class="img-container">
                             <img :src="singleDisk.img" :alt="singleDisk.title">
                         </div>
@@ -33,6 +33,27 @@
                     </div>
                 </div>
             </main>
+
+            <div class="overflow" v-if="clicked == true">
+                <div class="card info">
+                    <div class="img-container">
+                        <img :src="disks[1].img" :alt="disks.title">
+                    </div>
+                    <div class="title">
+                        {{disks[1].title}}
+                    </div>
+                    <div class="autor">
+                        {{disks[1].author}}
+                    </div>
+                    <div class="year">
+                        {{disks[1].year}}
+                    </div>
+                </div>
+
+                <button class="my-button" @click="close()">
+                    X
+                </button>
+            </div>
         </div>
 
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

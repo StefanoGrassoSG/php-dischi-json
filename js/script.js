@@ -3,7 +3,16 @@ const { createApp } = Vue
     createApp({
         data() {
             return {
-                disks: []
+                disks: [],
+                clicked: false
+            }
+        },
+        methods: {
+            openInfo(singleDisk) {
+                this.clicked = true;
+            },
+            close() {
+                this.clicked = false;
             }
         },
         created() {
