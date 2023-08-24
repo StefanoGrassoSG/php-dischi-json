@@ -35,18 +35,18 @@
             </main>
 
             <div class="overflow" v-if="clicked == true">
-                <div class="card info">
+                <div class="card info" v-for="(singleDiskInfo, i) in singleInfo">
                     <div class="img-container">
-                        <img :src="singleInfo[0].img" :alt="singleInfo[0].title">
+                        <img :src="singleDiskInfo.img" :alt="singleDiskInfo.title">
                     </div>
                     <div class="title">
-                        {{singleInfo[0].title}}
+                        {{singleDiskInfo.title}}
                     </div>
                     <div class="autor">
-                        {{singleInfo[0].author}}
+                        {{singleDiskInfo.author}}
                     </div>
                     <div class="year">
-                        {{singleInfo[0].year}}
+                        {{singleDiskInfo.year}}
                     </div>
                 </div>
 

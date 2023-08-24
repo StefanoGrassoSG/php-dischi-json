@@ -25,6 +25,7 @@ const { createApp } = Vue
             axios.get('http://localhost/php-dischi-json/database/api.php')
             .then(res => {
                 this.disks = res.data
+                console.log(this.disks)
             })
         }
     }).mount('#app')
