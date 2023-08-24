@@ -2,31 +2,37 @@
     {
         "title": "Thriller",
         "author": "Michael Jackson",
-        "year": "1982"
+        "year": "1982",
+        "img": "https://i.pinimg.com/736x/f7/9a/a4/f79aa4becb0ff083b096f181dfcbabc8.jpg"
     },
     {
         "title": "Justified",
         "author": "Justin Timberlake",
-        "year": "2002"
+        "year": "2002",
+        "img": "https://i.pinimg.com/736x/f7/9a/a4/f79aa4becb0ff083b096f181dfcbabc8.jpg"
     },
     {
         "title": "The Fame",
         "author": "Lady Gaga",
-        "year": "2008"
+        "year": "2008",
+        "img": "https://i.pinimg.com/736x/f7/9a/a4/f79aa4becb0ff083b096f181dfcbabc8.jpg"
     },
     {
         "title": "One of the Boys",
         "author": "Katy Perry",
-        "year": "2009"
+        "year": "2009",
+        "img": "https://i.pinimg.com/736x/f7/9a/a4/f79aa4becb0ff083b096f181dfcbabc8.jpg"
     },
     {
         "title": "Lemonade",
         "author": "Beyoncè",
-        "year": "2016"
+        "year": "2016",
+        "img": "https://i.pinimg.com/736x/f7/9a/a4/f79aa4becb0ff083b096f181dfcbabc8.jpg"
     },
     {
         "title": "1989",
         "author": "Taylor Swift",
-        "year": "2014"
+        "year": "2014",
+        "img": "https://i.pinimg.com/736x/f7/9a/a4/f79aa4becb0ff083b096f181dfcbabc8.jpg"
     }
 ]

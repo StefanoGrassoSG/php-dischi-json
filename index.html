@@ -9,7 +9,30 @@
 </head>
     <body>
         <div id="app">
-            {{message}}
+            <header>
+                <h1>
+                    SUPER DISKS
+                </h1>
+            </header>
+
+            <main>
+                <div class="container">
+                    <div class="card" v-for="(singleDisk, i) in disks">
+                        <div class="img-container">
+                            <img :src="singleDisk.img" :alt="singleDisk.title">
+                        </div>
+                        <div class="title">
+                            {{singleDisk.title}}
+                        </div>
+                        <div class="autor">
+                            {{singleDisk.author}}
+                        </div>
+                        <div class="year">
+                            {{singleDisk.year}}
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
 
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

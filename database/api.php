@@ -2,6 +2,6 @@
 
 $string = file_get_contents('disks.json');
 
-$disks = json_decode($string, true);
+header('content-type: application/json');
 
-var_dump($disks);
+echo $string;
