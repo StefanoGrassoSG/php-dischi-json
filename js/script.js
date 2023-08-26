@@ -10,7 +10,7 @@ const { createApp } = Vue
         },
         methods: {
             openInfo(diskId) {
-                this.clicked = true;
+                
                 axios.get('http://localhost/php-dischi-json/database/api.php', {
                     params: {
                         id: diskId
@@ -19,6 +19,7 @@ const { createApp } = Vue
                 .then(res => {
                     this.singleInfo = res.data
                     console.log(this.singleInfo)
+                    this.clicked = true;
                 })
             },
             close() {
