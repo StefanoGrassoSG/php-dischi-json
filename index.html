@@ -6,6 +6,7 @@
     <title>PHP Dischi JSON</title>
     <!--CSS-->
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
     <body>
         <div id="app" class="main-container">
@@ -35,18 +36,18 @@
             </main>
 
             <div class="overflow" v-if="clicked == true">
-                <div class="card info" v-for="(singleDiskInfo, i) in singleInfo">
+                <div class="card info">
                     <div class="img-container">
-                        <img :src="singleDiskInfo.img" :alt="singleDiskInfo.title">
+                        <img :src="singleInfo.img" :alt="singleInfo.title">
                     </div>
                     <div class="title">
-                        {{singleDiskInfo.title}}
+                        {{singleInfo.title}}
                     </div>
                     <div class="autor">
-                        {{singleDiskInfo.author}}
+                        {{singleInfo.author}}
                     </div>
                     <div class="year">
-                        {{singleDiskInfo.year}}
+                        {{singleInfo.year}}
                     </div>
                 </div>
 
@@ -56,7 +57,7 @@
             </div>
         </div>
 
-        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="js/script.js"></script>
     </body>

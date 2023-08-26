@@ -5,13 +5,17 @@ const { createApp } = Vue
             return {
                 disks: [],
                 clicked: false,
-                singleInfo: []
+                singleInfo: null
             }
         },
         methods: {
             openInfo(diskId) {
                 this.clicked = true;
-                axios.get(`http://localhost/php-dischi-json/database/api.php?id=${diskId}`)
+                axios.get('http://localhost/php-dischi-json/database/api.php', {
+                    params: {
+                        id: diskId
+                    }
+                })
                 .then(res => {
                     this.singleInfo = res.data
                     console.log(this.singleInfo)
