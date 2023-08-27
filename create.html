@@ -18,24 +18,37 @@
             </header>
             
             <main class="create-page-main">
-                <form action="" class="create">
+                <form class="create" @submit.prevent="saveDisk()">
                     <div>
                         <label for="title">Title</label>
-                        <input type="text" id="title">
+                        <input type="text" id="title" v-model="newDisk.title" name="title">
                     </div>
                     
                     <div>
-                        <label for="">Author</label>
-                        <input type="text" id="autor">
+                        <label for="autor">Author</label>
+                        <input type="text" id="autor" v-model="newDisk.author" name="author">
                     </div>
                     
                     <div>
                         <label for="year">Year</label>
-                        <input type="number" id="year" value="1900">
+                        <input type="number" id="year" min="1900" max="2023" v-model="newDisk.year" name="year">
+                    </div>
+
+                    <div>
+                        <label for="img">link image</label>
+                        <input type="text" id="img" v-model="newDisk.img" name="img">
                     </div>
 
                     <input type="submit" class="submit" value="Add">
                 </form>
+
+                <template v-if="error">
+                    <div class="error">
+                        <h3>
+                            Dati Mancanti
+                        </h3>
+                    </div>
+                </template>
             </main>
         </div>
 

@@ -59,7 +59,6 @@ main {
 .card {
     width: calc((100% / 3) - 40px);
     border-radius: 7px;
-    height: 350px;
     background-color: white;
     margin: 20px;
     cursor: pointer;
@@ -67,6 +66,8 @@ main {
     background: rgb(18,142,177);
     background: linear-gradient(173deg, rgba(18,142,177,1) 0%, rgba(6,167,249,1) 100%);
     color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .card.main {
@@ -166,4 +167,17 @@ form {
 
 .create-page-main {
     height: calc(100vh - 100px);
+}
+
+.error {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.error h3 {
+    text-align: center;
+    background-color: yellow;
+    padding: 8px 16px;
+    border-radius: 5px;
 }

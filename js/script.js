@@ -5,7 +5,14 @@ const { createApp } = Vue
             return {
                 disks: [],
                 clicked: false,
-                singleInfo: null
+                singleInfo: null,
+                newDisk: {
+                    title: '',
+                    author: '',
+                    year: 1900,
+                    img: ''
+                },
+                error: false
             }
         },
         methods: {
@@ -24,6 +31,23 @@ const { createApp } = Vue
             },
             close() {
                 this.clicked = false;
+            },
+            saveDisk() {
+                axios.post('http://localhost/php-dischi-json/store.php', {
+                    disc: this.newDisk
+                }, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    }
+                })
+                .then(response => {
+                    if(response.data == 'error') {
+                        this.error = true
+                    }
+                    else {
+                        window.location.href = 'http://localhost/php-dischi-json/index.html'
+                    }
+                })
             }
         },
         created() {
